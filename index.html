@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <input type="button" value="Кнопка 1" id="1">
+    </button>
+    <script>
+        document.body.addEventListener("click", function(event) {
+            if (event.target.nodeName != "INPUT")
+            return;
+            var a = ++event.target.id;
+            var btnSecond = document.getElementById(a);
+            var c = String(Number(2 * a - 2));
+            var b = String(a);
+            btnSecond.setAttribute('disabled', 'disabled');
+            var btn = document.createElement('input');
+            var Os = document.createElement('br');
+            btn.value ="Кнопка " + String(a);
+            btn.type = 'button';
+            btn.id = b;
+            document.body.append(Os);
+            document.body.append(btn);
+            
+        });
+    </script>
+</body>
+</htm>
